@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log Info</title>
+</head>
+<body>
+<h2>Test Logging</h2>
+<button onclick="triggerLog()">Trigger Log</button>
+
+<script>
+  function triggerLog() {
+      fetch('/api/log')
+          .then(response => response.text())
+          .then(data => alert(data))
+          .catch(error => console.error('Error logging:', error));
+  }
+</script>
+</body>
+</html>

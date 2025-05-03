@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rate a Ride</title>
+</head>
+<body>
+<h2>Rating Form</h2>
+<form action="/api/ratings" method="post">
+  <label>Ride ID:</label><input type="number" name="rideId" required><br>
+  <label>User ID:</label><input type="number" name="userId" required><br>
+  <label>Driver ID:</label><input type="number" name="driverId" required><br>
+  <label>Rating (1-5):</label><input type="number" min="1" max="5" name="rating" required><br>
+  <label>Review:</label><textarea name="review"></textarea><br>
+  <button type="submit">Submit Rating</button>
+</form>
+</body>
+</html>
